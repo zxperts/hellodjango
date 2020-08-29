@@ -33,7 +33,7 @@ path('hello/', views.hello),
 
 lancer python manage.py runserver
 
-###Exercice: Creer une application Django
+### Exercice: Creer une application Django
 __Nommée apptwo:__ 
 python manage.py startapp apptwo
 
@@ -42,7 +42,7 @@ python manage.py startapp apptwo
 - apptwo/views.py => djangorocks()
 Affiche en réponse "This is a Jazzy Response”
 
-#Exercice afﬁcher les donnees d‘unutilisateur
+# Exercice afﬁcher les donnees d‘unutilisateur
 Outils
 - Une app peoplebook
 
