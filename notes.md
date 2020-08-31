@@ -1,8 +1,13 @@
+#Django
+
+```bash
 pip install Django
+```
 
+```bash
 django-admin startproject hellodjango .
-
 python manage.py runserver
+```
 
 # Creer une application djamgo
 Structure projet
@@ -20,7 +25,9 @@ __Contenu application__
 - admin . py => configuration interface de gestion des modéles
 
 __creer une premier application__
+```bash
 python manage.py startapp appone
+```
 
 __mettre dans settings.py__
 'appone.apps.ApponeConfig',
@@ -35,7 +42,9 @@ lancer python manage.py runserver
 
 ### Exercice: Creer une application Django
 __Nommée apptwo:__ 
+```bash
 python manage.py startapp apptwo
+```
 
 
 - Avec une route /dj angorocks/
@@ -58,8 +67,8 @@ Outils
     
 - Outils
     - Un template base . html
-    - Bloctitle
-    - Bloccontent
+    - Bloc title
+    - Bloc content
     - Un template enfant use rs_list . html
     - Untemplateenfantusers_detail.html
     - Images d’utilisateurs => peoplebook/static/img/v’v . j pg

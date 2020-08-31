@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'appone.apps.ApponeConfig',
     'apptwo.apps.ApptwoConfig',
+    'peoplebook.apps.PeoplebookConfig',
 ]
 
 MIDDLEWARE = [
