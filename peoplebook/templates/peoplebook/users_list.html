@@ -6,4 +6,12 @@
 
 <h1> Peoplebook List </h1>
 
+
+<ul>
+    {% for key, user in users.items %}
+    <li>{{user.name|title}}</li>
+    {% endfor %}
+
+</ul>
+
 {% endblock %}
