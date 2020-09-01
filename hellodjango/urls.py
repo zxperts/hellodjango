@@ -24,5 +24,5 @@ urlpatterns = [
     path('hello/', views.hello),
     path('djangorocks/', apptwo_views.djangorocks),
     #path('users/', peoplebook_views.users),
-    path('peoplebook/', include('peoplebook.urls')),
+    path('peoplebook/', include('peoplebook.urls'))
 ]
