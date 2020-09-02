@@ -11,11 +11,14 @@ def users(request):
 
 
 
-def users_details(request,display='small'):
-    return None
+def users_details(request,name):
+    context = {'user': people[name],
+               }
+    return render(request, 'peoplebook/users_detail.html', context)
+
 
 
 def users_list(request,display='small'):
-    context={'users': people,
+    context={'user': people,
              }
     return render(request,'peoplebook/users_list.html',context)
