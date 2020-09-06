@@ -19,6 +19,7 @@ def users_details(request,name):
 
 
 def users_list(request,display='small'):
-    context={'user': people,
+    context={'display':display,
+        'user': people,
              }
     return render(request,'peoplebook/users_list.html',context)

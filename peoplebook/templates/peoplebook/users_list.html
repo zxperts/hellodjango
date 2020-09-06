@@ -6,12 +6,19 @@
 
 <h1> Peoplebook List </h1>
 
-
-<ul>
+{% if display == 'full' %}
     {% for key, user in users.items %}
-    <li>{{user.name|title}}</li>
+        {% include "peoplebook/block_users_detail.html" %}
     {% endfor %}
 
+{% else %}
+<ul>
+    {% for key, user in users.items %}
+    <li><a href="{% url 'peoplebook-users-detail' key %}">
+        {{user.name|title}}</a>
+    </li>
+    {% endfor %}
 </ul>
+{% endif %}
 
-{% endblock %}
+{% endblock content %}
