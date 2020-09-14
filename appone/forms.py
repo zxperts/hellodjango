@@ -4,8 +4,8 @@ from django import forms
 class TestForm(forms.Form):
     CITIES_CHOICES = (
         (0, 'Paris'),
-        (0, 'Toulouse'),
-        (0, 'Lyon'),
+        (1, 'Toulouse'),
+        (2, 'Lyon'),
     )
 
     name = forms.CharField(label='Your name', max_length=50)
