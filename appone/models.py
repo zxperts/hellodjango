@@ -37,17 +37,21 @@ class Device(models.Model):
             enabled=self.enabled,
             description=self.description
         )
+
+
 class Company(models.Model):
     name = models.CharField(max_length=50)
 
     def __str__(self):
         return '{} {}'.format(self.pk,self.name)
 
+
 class Departement(models.Model):
     name = models.CharField(max_length=50)
 
     def __str__(self):
         return '{} {}'.format(self.pk,self.name)
+
 
 class Employee(models.Model):
     name = models.CharField(max_length=50)

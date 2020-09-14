@@ -28,4 +28,5 @@ urlpatterns = [
     path('devices/add/<str:os>/<str:model>/',views.device_add),
     path('devices/<int:id>/', views.device_detail),
     path('devices/filter/<str:os>/', views.devices_filter),
+    path('getformdata/', views.get_form_data),
 ]

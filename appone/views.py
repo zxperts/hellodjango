@@ -4,6 +4,7 @@ from django.http import HttpResponse
 # Create your views here.
 
 from appone.models import Device
+from appone.forms import TestForm
 
 def hello(request):
     return HttpResponse("Hello Django! appone application")
@@ -29,6 +30,11 @@ def devices_filter(request, os):
 
     body='<br/>'.join(devices_names)
     return HttpResponse(body)
+
+
+def get_form_data(request):
+    form = TestForm()
+    return render(request, 'appone/form.html', {'form': form})
 
 
 
