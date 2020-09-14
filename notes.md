@@ -405,3 +405,8 @@ Outils
 python manage.py makemigration
 python manage.py migrate
 ````
+
+```cmd
+python manage.py shell
+python manage.py createsuperuser
+````

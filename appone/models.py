@@ -37,3 +37,31 @@ class Device(models.Model):
             enabled=self.enabled,
             description=self.description
         )
+class Company(models.Model):
+    name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return '{} {}'.format(self.pk,self.name)
+
+class Departement(models.Model):
+    name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return '{} {}'.format(self.pk,self.name)
+
+class Employee(models.Model):
+    name = models.CharField(max_length=50)
+    company = models.ForeignKey('Company',on_delete=models.CASCADE)
+    departement = models.ForeignKey('Departement',on_delete=models.CASCADE)
+    age = models.IntegerField()
+    name = models.DecimalField(max_digits=6,decimal_places=2)
+
+    def __str__(self):
+        return '{id} {name}, company={company}, department={departement}, age={age}, salary={salary}'.format(
+            id=self.pk,
+            name=self.name,
+            company=self.company,
+            departement=self.departement,
+            age=self.age,
+            salary=self.salary,
+        )
