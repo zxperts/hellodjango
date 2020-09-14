@@ -7,6 +7,7 @@ from django.urls import reverse
 from appone.models import Device
 from appone.forms import TestForm
 from appone.forms import UserRegistrationForm
+from appone.forms import SongForm
 
 def hello(request):
     return HttpResponse("Hello Django! appone application")
@@ -77,4 +78,8 @@ def user_register(request):
         form = UserRegistrationForm()
     return render(request, 'appone/user_registration.html', {'form':form})
 
+
+def song_create(request):
+    form = SongForm()
+    return render(request, 'appone/song_create.html', {'form': form})
 

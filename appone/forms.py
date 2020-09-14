@@ -1,6 +1,8 @@
 from django import forms
 from django.forms import CheckboxSelectMultiple
 
+from appone.models import Song
+
 
 class TestForm(forms.Form):
     CITIES_CHOICES = (
@@ -37,4 +39,11 @@ class UserRegistrationForm(forms.Form):
                                                    required=False,
                                                    widget=CheckboxSelectMultiple,
                                                    choices=ADDITIONAL_0PTIONS_CHOICES)
+
+
+class SongForm(forms.ModelForm):
+    class Meta:
+        model = Song
+        #fields = ['name', 'duration']
+        fields= '__all__'
 

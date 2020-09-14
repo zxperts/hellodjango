@@ -31,5 +31,7 @@ urlpatterns = [
     path('getformdata/', views.get_form_data, name='get-form-data'),
     path('thanks/', views.thanks, name='thanks'),
     path('thanks_user/<str:name>/', views.thanks_user, name='thanks_user'),
-    path('register/', views.user_register, name='user-registration')
+    path('register/', views.user_register, name='user-registration'),
+    path('songs/create', views.song_create)
+
 ]
