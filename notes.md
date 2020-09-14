@@ -396,4 +396,12 @@ Outils
     - 3émeURL/users/fu11/
     - Liste avec Ie détail de Chaque utilisateur
     - taginclude
-    - FichierHTMLcentralisantledétailblock_users_detail.html    
+    - FichierHTMLcentralisantledétailblock_users_detail.html  
+    
+    
+#### Exercice : créer un modèle, ajouter en db et l'affichage  
+
+```cmd
+python manage.py makemigration
+python manage.py migrate
+````
