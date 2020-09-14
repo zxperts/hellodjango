@@ -29,5 +29,7 @@ urlpatterns = [
     path('devices/<int:id>/', views.device_detail),
     path('devices/filter/<str:os>/', views.devices_filter),
     path('getformdata/', views.get_form_data, name='get-form-data'),
-    path('thanks/', views.thanks, name='thanks')
+    path('thanks/', views.thanks, name='thanks'),
+    path('thanks_user/<str:name>/', views.thanks_user, name='thanks_user'),
+    path('register/', views.user_register, name='user-registration')
 ]

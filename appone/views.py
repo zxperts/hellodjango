@@ -6,6 +6,7 @@ from django.urls import reverse
 
 from appone.models import Device
 from appone.forms import TestForm
+from appone.forms import UserRegistrationForm
 
 def hello(request):
     return HttpResponse("Hello Django! appone application")
@@ -36,6 +37,9 @@ def devices_filter(request, os):
 def thanks(request):
     return HttpResponse('Thanks your form has been processed')
 
+def thanks_user(request,name):
+    return HttpResponse('Thanks {} your registration is successfull'.format(name))
+
 
 def get_form_data(request):
 
@@ -55,5 +59,22 @@ def get_form_data(request):
         form = TestForm()
     return render(request, 'appone/form.html', {'form': form})
 
+def user_register(request):
+    if request.method=="POST":
+        form = UserRegistrationForm(request.POST)
+
+        if form.is_valid():
+            name = form.cleaned_data['name']
+
+            if form.cleaned_data['sign_to_news']:
+                print('Signed up {} to eh newsletter'.format(form.cleaned_data['email']))
+
+            print(form)
+
+            return HttpResponseRedirect(reverse('thanks_user', args=[name]))
+
+    else:
+        form = UserRegistrationForm()
+    return render(request, 'appone/user_registration.html', {'form':form})
 
 
