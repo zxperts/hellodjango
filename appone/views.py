@@ -80,6 +80,15 @@ def user_register(request):
 
 
 def song_create(request):
-    form = SongForm()
+    if request.method == 'POST':
+        form = SongForm(request.POST)
+        song = form.save(commit=False)
+
+        song.name = song.name + ' MODIFIED'
+        song.save()
+        print(song)
+
+    else:
+        form = SongForm()
     return render(request, 'appone/song_create.html', {'form': form})
 
