@@ -410,3 +410,21 @@ python manage.py migrate
 python manage.py shell
 python manage.py createsuperuser
 ````
+
+### Le framework bootsteap
+
+Les tailles
+- Pour chaque taille d’écran, définir le nombre de colonnes occupées
+- Extra .col- small< 576
+- small .col-sm- >=576
+- Medium .col-md- >=768
+- Large .col-lg- >= 992px
+- Extra large .col-xl-  >= 1200px
+
+Traduction en code
+```html
+<p olass=”ool—sm—4 ool—md—6 col—lg—8”>
+Lorem ipsum dolor sit amet
+</p>
+```
+
