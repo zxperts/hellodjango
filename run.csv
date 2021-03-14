@@ -1,4 +1,4 @@
-run_number,description,calc_step_code
+y,description,x
 1,Opening Current,OPENING_CURRENT
 2,Opening on inception financial basis,OPENING_INCEPTION
 3,Assessment of Onerosity - Start of Period Changes,AOO_SOP_CHANGES
