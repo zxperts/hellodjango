@@ -1,0 +1,18 @@
+run_number,description,calc_step_code
+1,Opening Current,OPENING_CURRENT
+2,Opening on inception financial basis,OPENING_INCEPTION
+3,Assessment of Onerosity - Start of Period Changes,AOO_SOP_CHANGES
+20,NB recognition,NB_RECOGNITION
+21,NB to IF,NB_TO_IF
+22,Assessment of Onerosity - Start of Period Changes with New Business,AOO_SOP_CHANGES_WITH_NB
+41,Interest accretion,INTEREST_ACCRETION
+42,Release of Expected Cash Flows,FCF_RELEASE
+43,Cash flow variance - Actual to Expected,CF_VARIANCE
+50,Volume effect,EXPERIENCE_ADJUSTMENTS_FUTURE
+60,Change in Non Financial Assumptions,CHANGE_IN_NFA
+70,Change in Financial assumptions,CHANGE_IN_FA
+79,Assessment of Onerosity - End of Period Changes,AOO_EOP_CHANGES
+80,CSM amortization,AMORTIZATION
+90,Closing (inception financial basis),CLOSING_INCEPTION
+100,Closing (current financial basis),CLOSING_CURRENT
+200,New Claims,NEW_CLAIMS
